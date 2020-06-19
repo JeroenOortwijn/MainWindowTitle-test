@@ -18,7 +18,7 @@
                     if (mainWindowTitle != oldMainWindowTitle)
                     {
                         oldMainWindowTitle = mainWindowTitle;
-                        System.Console.WriteLine(mainWindowTitle);
+                        System.Console.WriteLine($"{mainWindowTitle} == {mainWindowTitle == string.Empty}");
                     }
                     System.Threading.Thread.Sleep(1000);
                 } while (!(System.Console.KeyAvailable && System.Console.ReadKey(true).Key == System.ConsoleKey.Escape));

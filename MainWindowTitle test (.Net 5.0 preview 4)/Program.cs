@@ -14,11 +14,11 @@
                 do
                 {
                     process?.Refresh();
-                    string mainWindowTitle = process.MainWindowTitle;
+                    string mainWindowTitle = process?.MainWindowTitle;
                     if (mainWindowTitle != oldMainWindowTitle)
                     {
                         oldMainWindowTitle = mainWindowTitle;
-                        System.Console.WriteLine(mainWindowTitle);
+                        System.Console.WriteLine($"{mainWindowTitle} == {mainWindowTitle == string.Empty}");
                     }
                     System.Threading.Thread.Sleep(1000);
                 } while (!(System.Console.KeyAvailable && System.Console.ReadKey(true).Key == System.ConsoleKey.Escape));
